@@ -35,14 +35,11 @@ const getLinuxRes=(Os, Lang)=>{
     if(Lang === "Python"){
         switch (Os.Packages) {
             case "Conda":
-                return casePlatformPython(Os, 'Conda', 'Linux')
-                break;
+                return casePlatformPython(Os, 'Conda', 'Linux');
             case "Pip":
-                return casePlatformPython(Os, 'Pip', 'Linux')
-                break;
+                return casePlatformPython(Os, 'Pip', 'Linux');
             case "Source":
-                return casePlatformPython(Os, 'Source', 'Linux')
-                break;
+                return casePlatformPython(Os, 'Source', 'Linux');
             default:
                 break;
         }
@@ -53,23 +50,19 @@ const getLinuxRes=(Os, Lang)=>{
                 return `Download here (Pre-cxx11 ABI):
                 https://download.pytorch.org/libtorch/cu102/libtorch-shared-with-deps-1.11.0%2Bcu102.zip
                 Download here (cxx11 ABI):
-                https://download.pytorch.org/libtorch/cu102/libtorch-cxx11-abi-shared-with-deps-1.11.0%2Bcu102.zip`
-                break;
+                https://download.pytorch.org/libtorch/cu102/libtorch-cxx11-abi-shared-with-deps-1.11.0%2Bcu102.zip`;
             case "CUDA 11.3":
                 return `Download here (Pre-cxx11 ABI):
                 https://download.pytorch.org/libtorch/cu113/libtorch-shared-with-deps-1.11.0%2Bcu113.zip
                 Download here (cxx11 ABI):
-                https://download.pytorch.org/libtorch/cu113/libtorch-cxx11-abi-shared-with-deps-1.11.0%2Bcu113.zip`
-                break;
+                https://download.pytorch.org/libtorch/cu113/libtorch-cxx11-abi-shared-with-deps-1.11.0%2Bcu113.zip`;
             case "ROCM 4.5.2 (beta)":
-                return `LibTorch binaries are not available for ROCm, please build it from source`
-                break;
+                return `LibTorch binaries are not available for ROCm, please build it from source`;
             case "CPU":
                 return `Download here (Pre-cxx11 ABI):
                 https://download.pytorch.org/libtorch/cpu/libtorch-shared-with-deps-1.11.0%2Bcpu.zip
                 Download here (cxx11 ABI):
-                https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-1.11.0%2Bcpu.zip`
-                break;
+                https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-1.11.0%2Bcpu.zip`;
             default:
                 break;
         }
@@ -79,14 +72,11 @@ const getWinRes=(Os, Lang)=>{
     if(Lang === "Python"){
         switch (Os.Packages) {
             case "Conda":
-                return casePlatformPython(Os, Lang, 'Win')
-                break;
+                return casePlatformPython(Os, Lang, 'Win');
             case "Pip":
-                return casePlatformPython(Os, Lang, 'Win')
-                break;
+                return casePlatformPython(Os, Lang, 'Win');
             case "Source":
-                return casePlatformPython(Os, Lang, 'Win')
-                break;
+                return casePlatformPython(Os, Lang, 'Win');
             default:
                 break;
         }
@@ -94,20 +84,17 @@ const getWinRes=(Os, Lang)=>{
     if(Lang === "C++ / Java"){
         switch(Os.ComputePlatform) {
             case "CUDA 10.2":
-                return `CUDA-10.2 PyTorch builds are no longer available for Windows, please use CUDA-11.3`
-                break;
+                return `CUDA-10.2 PyTorch builds are no longer available for Windows, please use CUDA-11.3`;
             case "CUDA 11.3":
                 return `Download here (Release version):
                 https://download.pytorch.org/libtorch/cu113/libtorch-win-shared-with-deps-1.11.0%2Bcu113.zip
                 Download here (Debug version):
-                https://download.pytorch.org/libtorch/cu113/libtorch-win-shared-with-deps-debug-1.11.0%2Bcu113.zip`
-                break;
+                https://download.pytorch.org/libtorch/cu113/libtorch-win-shared-with-deps-debug-1.11.0%2Bcu113.zip`;
             case "CPU":
                 return `Download here (Release version):
                 https://download.pytorch.org/libtorch/cpu/libtorch-win-shared-with-deps-1.11.0%2Bcpu.zip
                 Download here (Debug version):
-                https://download.pytorch.org/libtorch/cpu/libtorch-win-shared-with-deps-debug-1.11.0%2Bcpu.zip`
-                break;
+                https://download.pytorch.org/libtorch/cpu/libtorch-win-shared-with-deps-debug-1.11.0%2Bcpu.zip`;
             default:
                 break;
         }
@@ -117,14 +104,11 @@ const getMacRes=(Os, Lang)=>{
     if(Lang === "Python"){
         switch (Os.Packages) {
             case "Conda":
-                return casePlatformPython(Os, 'Conda', 'Mac')
-                break;
+                return casePlatformPython(Os, 'Conda', 'Mac');
             case "Pip":
-                return casePlatformPython(Os, 'Pip', 'Mac')
-                break;
+                return casePlatformPython(Os, 'Pip', 'Mac');
             case "Source":
-                return casePlatformPython(Os, 'Source', 'Mac')
-                break;
+                return casePlatformPython(Os, 'Source', 'Mac');
             default:
                 break;
         }
@@ -133,8 +117,7 @@ const getMacRes=(Os, Lang)=>{
         switch (Os.ComputePlatform) {
             case "CPU":
                 return `Download here:
-                https://download.pytorch.org/libtorch/cpu/libtorch-macos-1.11.0.zip`
-                break;
+                https://download.pytorch.org/libtorch/cpu/libtorch-macos-1.11.0.zip`;
             default:
                 break;
         }
