@@ -1,0 +1,59 @@
+.Q1{
+    border: 1px solid purple;
+    min-height: 70vh;
+   width: 70%;
+    ul {
+        li {
+            margin: 10px auto;
+            p {
+                font-weight: bold;
+                margin: 5px auto;
+            }
+        }
+    }
+    .optionBtn{
+        min-width: 120px;
+        border: none;
+        padding: 8px 16px;
+        margin: 5px;
+        background-image: linear-gradient(20deg, #846b6b99,#796f60ae);
+        font-weight: 500;
+        color: rgb(212, 212, 212);
+        cursor: pointer;
+        border-radius: 50px;
+        font-size: .9rem;
+        transition: .5s;
+        box-shadow: 0 0 4px #414141bd;
+        text-shadow: #000000;
+    }
+    .selectedBtn{
+    background-image: linear-gradient(20deg, #fe5858,#f8b250);
+    color: white;
+    }
+    .disabled {
+    background-image: linear-gradient(20deg, #6e6e6e,#4d4d4d);
+    }
+    .stepBtn {
+    min-width: 120px;
+    border: none;
+    padding: 8px 10px;
+    background-color: #d7a55f;
+    margin: 30px auto;
+    cursor: pointer;
+    }
+    .allQues{
+        min-height: 45vh;
+        border: 1px solid red;
+    }
+    .resContainer{
+        margin: 0 auto;
+        .resultDisplay{
+            // width: 80%;
+            background-color: #545454;
+            color: white;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+    }
+}

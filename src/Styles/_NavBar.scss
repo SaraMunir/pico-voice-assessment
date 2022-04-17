@@ -1,0 +1,15 @@
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    .navItem {
+        padding: 10px;
+        color: rgb(65, 65, 65);
+        font-weight: bolder;
+        font-size: 1.2rem;
+    }
+    .activeNavItem{
+        color: #fe5858;
+    }
+}

@@ -1,0 +1,240 @@
+.Q1 {
+  border: 1px solid purple;
+  min-height: 70vh;
+  width: 70%;
+}
+.Q1 ul li {
+  margin: 10px auto;
+}
+.Q1 ul li p {
+  font-weight: bold;
+  margin: 5px auto;
+}
+.Q1 .optionBtn {
+  min-width: 120px;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  background-image: linear-gradient(20deg, rgba(132, 107, 107, 0.6), rgba(121, 111, 96, 0.6823529412));
+  font-weight: 500;
+  color: rgb(212, 212, 212);
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  transition: 0.5s;
+  box-shadow: 0 0 4px rgba(65, 65, 65, 0.7411764706);
+  text-shadow: #000000;
+}
+.Q1 .selectedBtn {
+  background-image: linear-gradient(20deg, #fe5858, #f8b250);
+  color: white;
+}
+.Q1 .disabled {
+  background-image: linear-gradient(20deg, #6e6e6e, #4d4d4d);
+}
+.Q1 .stepBtn {
+  min-width: 120px;
+  border: none;
+  padding: 8px 10px;
+  background-color: #d7a55f;
+  margin: 30px auto;
+  cursor: pointer;
+}
+.Q1 .allQues {
+  min-height: 45vh;
+  border: 1px solid red;
+}
+.Q1 .resContainer {
+  margin: 0 auto;
+}
+.Q1 .resContainer .resultDisplay {
+  background-color: #545454;
+  color: white;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.installCntr {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  height: 80vh;
+}
+.installCntr .tab {
+  width: 20%;
+  background-color: #1f1e25;
+  color: white;
+  text-align: left;
+}
+.installCntr .tab a {
+  text-decoration: none;
+  color: white;
+  padding-left: 20px;
+}
+.installCntr .tab ul li .active {
+  background-color: #5c5297;
+  color: white;
+}
+.installCntr .tab ul li a {
+  width: 100%;
+  display: inline-block;
+  padding: 20px;
+}
+.installCntr .tab ul li a:hover, .installCntr .tab ul li a:focus {
+  color: white;
+}
+.installCntr .tabDay {
+  background-color: #c3c8d1;
+}
+.installCntr .tabDay a {
+  color: rgb(35, 35, 35);
+}
+.installCntr .tabNight {
+  background-color: #1f1e25;
+}
+.installCntr .tabNight a {
+  color: rgb(229, 229, 229);
+}
+.installCntr .dayMode {
+  background-color: #dbdfe5;
+  color: black;
+}
+.installCntr .dayMode .buttonContainer button {
+  color: black;
+}
+.installCntr .dayMode .buttonContainer button i {
+  font-size: 1.2rem;
+}
+.installCntr .dayMode pre {
+  background: #e8ecf2;
+}
+.installCntr .dayMode pre button {
+  color: black;
+}
+.installCntr .dayMode pre code .main {
+  color: #523cd0;
+  display: block;
+}
+.installCntr .dayMode pre code .other2 {
+  color: #523cd0;
+}
+.installCntr .nightMode {
+  background-color: #26252c;
+  color: rgb(202, 202, 202);
+}
+.installCntr .nightMode .buttonContainer button {
+  color: white;
+}
+.installCntr .nightMode pre {
+  background: #383641;
+}
+.installCntr .nightMode pre button {
+  color: white;
+}
+.installCntr .nightMode pre code .main {
+  color: #9487dc;
+  display: block;
+}
+.installCntr .nightMode pre code .other2 {
+  color: #9487dc;
+}
+.installCntr .window {
+  width: 80%;
+  text-align: initial;
+  overflow: auto;
+  position: relative;
+  padding: 30px;
+}
+.installCntr .window a {
+  color: #5c5297;
+}
+.installCntr .window pre {
+  position: relative;
+  border-radius: 5px;
+  padding: 20px;
+}
+.installCntr .window pre button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.installCntr .buttonContainer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.installCntr .buttonContainer button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.spBtn {
+  min-width: 200px;
+  border: none;
+  padding: 25px;
+  margin: 10px;
+  background-image: linear-gradient(20deg, #cd5e5e, #d7a55f);
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  box-shadow: 0 0 4px rgba(65, 65, 65, 0.7411764706);
+}
+
+.spBtn:hover, .spBtn:focus {
+  background-image: linear-gradient(20deg, #fe5858, #f8b250);
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+nav .navItem {
+  padding: 10px;
+  color: rgb(65, 65, 65);
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+nav .activeNavItem {
+  color: #fe5858;
+}
+
+body ul {
+  padding: 0;
+}
+body ul li {
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+}
+body .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+body .wrap {
+  flex-wrap: wrap;
+}
+body .App {
+  text-align: center;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body pre {
+  text-align: initial;
+}/*# sourceMappingURL=styles.css.map */

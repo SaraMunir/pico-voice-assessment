@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+main {
+    text-align: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrap {
+    flex-wrap: wrap;
+  }
+  .spBtn {
+    min-width: 200px;
+    border: none;
+    padding: 25px;
+    margin: 10px;
+    background-image: linear-gradient(20deg, #cd5e5e,#d7a55f);
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size:1.2rem;
+    transition: .5s;
+    box-shadow: 0 0 4px #414141bd;
+  }
+  .spBtn:hover, .spBtn:focus {
+    background-image: linear-gradient(20deg, #fe5858,#f8b250);
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  .navItem {
+    padding: 10px;
+    color: rgb(65, 65, 65);
+    font-weight: bolder;
+    font-size: 1.2rem;
+  }
+  .activeNavItem{
+    color: #fe5858;
+  }
+  .optionBtn{
+    min-width: 120px;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    background-image: linear-gradient(20deg, #846b6b99,#796f60ae);
+    font-weight: 500;
+    color: rgb(212, 212, 212);
+    cursor: pointer;
+    border-radius: 50px;
+    font-size:1rem;
+    transition: .5s;
+    box-shadow: 0 0 4px #414141bd;
+    text-shadow: #000000;
+  }
+  .selectedBtn{
+    background-image: linear-gradient(20deg, #fe5858,#f8b250);
+    color: white;
+  }
+  .disabled {
+    background-image: linear-gradient(20deg, #6e6e6e,#4d4d4d);
+  }
+  .stepBtn {
+    min-width: 120px;
+    border: none;
+    padding: 8px 10px;
+    background-color: #d7a55f;
+    margin: 30px auto;
+    cursor: pointer;
+  }

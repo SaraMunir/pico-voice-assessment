@@ -1,0 +1,17 @@
+.spBtn {
+    min-width: 200px;
+    border: none;
+    padding: 25px;
+    margin: 10px;
+    background-image: linear-gradient(20deg, #cd5e5e,#d7a55f);
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size:1.2rem;
+    transition: .5s;
+    box-shadow: 0 0 4px #414141bd;
+}
+.spBtn:hover, .spBtn:focus {
+    background-image: linear-gradient(20deg, #fe5858,#f8b250);
+}

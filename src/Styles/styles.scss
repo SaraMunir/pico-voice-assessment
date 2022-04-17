@@ -1,0 +1,38 @@
+@import "Q1";
+@import "Q2";
+@import "Home";
+@import "NavBar";
+body {
+    ul {
+        padding: 0;
+        li {
+            list-style: none;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }    
+    .wrap {
+        flex-wrap: wrap;
+    }
+    .App {
+        text-align: center;
+        min-height: 95vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    pre {
+        text-align: initial;
+    }
+}
