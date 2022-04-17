@@ -41,11 +41,11 @@ function Q2() {
         <div className='buttonContainer'>
           {nightMode?
           <button onClick={()=>setNighMode(!nightMode)}>
-            <i class="fas fa-moon" ></i>
+            <i className="fas fa-moon" ></i>
           </button>
           :
           <button onClick={()=>setNighMode(!nightMode)}>
-            <i class="fas fa-sun"></i>
+            <i className="fas fa-sun"></i>
           </button>
         }
         </div>

@@ -5,7 +5,6 @@ import {choicePython, choiceCJava} from '../functions/Linux'
 import {caseForStableMac} from '../functions/caseForStableMac'
 import {caseForStableWin} from '../functions/caseForStableWin'
 import {resPrevNight} from '../functions/resPrevNight'
-import {resLTS} from '../functions/resLTS'
 import { resStable } from '../functions/resStable'
 function Q1() {
     const [ques, setQuests]=useState([

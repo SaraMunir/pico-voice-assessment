@@ -1,4 +1,6 @@
 $purpleColor: #5c5297;
+$purpleDay: #523cd0;
+$purpleNigh: #9487dc;
 
 .installCntr{
     display: flex;
@@ -60,18 +62,25 @@ $purpleColor: #5c5297;
                 }
             }
         }
+        .preWrap{
+            background: #e8ecf2;
+            padding: 20px;
+
+
+        }
         pre {
             background: #e8ecf2;
             button {
                 color: black;
             }
             code {
+                font-weight: 300;
                 .main {
-                    color: #523cd0;
+                    color: $purpleDay;
                     display: block;
                 }
-                .other2{
-                    color: #523cd0;
+                .tag{
+                    color: $purpleDay;
 
                 }
             }
@@ -85,6 +94,10 @@ $purpleColor: #5c5297;
                 color: white;
             }
         }
+        .preWrap{
+            background: #383641;
+            padding: 20px;
+        }
         pre {
             background: #383641;
             button {
@@ -92,11 +105,11 @@ $purpleColor: #5c5297;
             }
             code {
                 .main {
-                    color: #9487dc;
+                    color: $purpleNigh;
                     display: block;
                 }
-                .other2{
-                    color: #9487dc;
+                .tag{
+                    color: $purpleNigh;
 
                 }
             }
@@ -108,16 +121,29 @@ $purpleColor: #5c5297;
         overflow: auto;
         position: relative;
         padding: 30px;
+
         a {
             color: $purpleColor;
         }
-        
-        pre {
+        .preWrap{
             position: relative;
-            border-radius: 5px;
-            padding: 20px;
-
-
+            .successBtn{
+                background-color: $purpleColor;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 10px 20px;
+                color: white;
+                transition: .5s;
+                z-index: 5;
+                visibility: hidden;
+                opacity: 0;
+            }
+            .on{
+                z-index: 15;
+                visibility: visible;
+                opacity: 1;
+            }
             button{
                 position: absolute;
                 top: 10px;
@@ -125,6 +151,40 @@ $purpleColor: #5c5297;
                 background: none;
                 border: none;
                 cursor: pointer;
+                z-index: 10;
+            }
+        }
+        pre {
+            position: relative;
+            border-radius: 5px;
+            padding: 20px;
+            .successBtn{
+                background-color: $purpleColor;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 10px 20px;
+                color: white;
+                transition: .5s;
+                z-index: 5;
+                visibility: hidden;
+                opacity: 0;
+            }
+            .on{
+                z-index: 15;
+                visibility: visible;
+                opacity: 1;
+
+
+            }
+            button{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                z-index: 10;
             }
             
         }

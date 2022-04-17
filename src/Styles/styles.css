@@ -106,17 +106,24 @@
 .installCntr .dayMode .buttonContainer button i {
   font-size: 1.2rem;
 }
+.installCntr .dayMode .preWrap {
+  background: #e8ecf2;
+  padding: 20px;
+}
 .installCntr .dayMode pre {
   background: #e8ecf2;
 }
 .installCntr .dayMode pre button {
   color: black;
 }
+.installCntr .dayMode pre code {
+  font-weight: 300;
+}
 .installCntr .dayMode pre code .main {
   color: #523cd0;
   display: block;
 }
-.installCntr .dayMode pre code .other2 {
+.installCntr .dayMode pre code .tag {
   color: #523cd0;
 }
 .installCntr .nightMode {
@@ -125,6 +132,10 @@
 }
 .installCntr .nightMode .buttonContainer button {
   color: white;
+}
+.installCntr .nightMode .preWrap {
+  background: #383641;
+  padding: 20px;
 }
 .installCntr .nightMode pre {
   background: #383641;
@@ -136,7 +147,7 @@
   color: #9487dc;
   display: block;
 }
-.installCntr .nightMode pre code .other2 {
+.installCntr .nightMode pre code .tag {
   color: #9487dc;
 }
 .installCntr .window {
@@ -149,10 +160,56 @@
 .installCntr .window a {
   color: #5c5297;
 }
+.installCntr .window .preWrap {
+  position: relative;
+}
+.installCntr .window .preWrap .successBtn {
+  background-color: #5c5297;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+  color: white;
+  transition: 0.5s;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+}
+.installCntr .window .preWrap .on {
+  z-index: 15;
+  visibility: visible;
+  opacity: 1;
+}
+.installCntr .window .preWrap button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
 .installCntr .window pre {
   position: relative;
   border-radius: 5px;
   padding: 20px;
+}
+.installCntr .window pre .successBtn {
+  background-color: #5c5297;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+  color: white;
+  transition: 0.5s;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+}
+.installCntr .window pre .on {
+  z-index: 15;
+  visibility: visible;
+  opacity: 1;
 }
 .installCntr .window pre button {
   position: absolute;
@@ -161,6 +218,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 10;
 }
 .installCntr .buttonContainer {
   position: absolute;

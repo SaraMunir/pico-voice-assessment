@@ -18,7 +18,8 @@ function NavBar() {
                 </li>
                 <li>
                     {
-                        location.pathname === "/Q2" ? <Link className='activeNavItem navItem' to="/Q2">Q2</Link> :<Link className='navItem ' to="/Q2">Q2</Link>
+                        location.pathname === "/Q2/cSharp" ? <Link className='activeNavItem navItem' to="/Q2">Q2</Link> :
+                        <Link className='navItem ' to="/Q2/cSharp">Q2</Link>
                     }
                 </li>
             </ul>
