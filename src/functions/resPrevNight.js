@@ -33,14 +33,11 @@ const getLinuxRes=(Os, Lang)=>{
     if(Lang === "Python"){
         switch (Os.Packages) {
             case "Conda":
-                return casePlatformPython(Os, 'Conda', 'Linux')
-                break;
+                return casePlatformPython(Os, 'Conda', 'Linux');
             case "Pip":
-                return casePlatformPython(Os, 'Pip', 'Linux')
-                break;
+                return casePlatformPython(Os, 'Pip', 'Linux');
             case "Source":
-                return casePlatformPython(Os, 'Source', 'Linux')
-                break;
+                return casePlatformPython(Os, 'Source', 'Linux');
             default:
                 break;
         }
@@ -51,23 +48,19 @@ const getLinuxRes=(Os, Lang)=>{
                 return `Download here (Pre-cxx11 ABI):
                     https://download.pytorch.org/libtorch/nightly/cu102/libtorch-shared-with-deps-latest.zip
                     Download here (cxx11 ABI):
-                    https://download.pytorch.org/libtorch/nightly/cu102/libtorch-cxx11-abi-shared-with-deps-latest.zip`
-                break;
+                    https://download.pytorch.org/libtorch/nightly/cu102/libtorch-cxx11-abi-shared-with-deps-latest.zip`;
             case "CUDA 11.3":
                 return `Download here (Pre-cxx11 ABI):
                 https://download.pytorch.org/libtorch/nightly/cu113/libtorch-shared-with-deps-latest.zip
                 Download here (cxx11 ABI):
-                https://download.pytorch.org/libtorch/nightly/cu113/libtorch-cxx11-abi-shared-with-deps-latest.zip`
-                break;
+                https://download.pytorch.org/libtorch/nightly/cu113/libtorch-cxx11-abi-shared-with-deps-latest.zip`;
             case "ROCM 4.5.2 (beta)":
-                return `LibTorch binaries are not available for ROCm, please build it from source`
-                break;
+                return `LibTorch binaries are not available for ROCm, please build it from source`;
             case "CPU":
                 return `Download here (Pre-cxx11 ABI):
                 https://download.pytorch.org/libtorch/nightly/cpu/libtorch-shared-with-deps-latest.zip
                 Download here (cxx11 ABI):
-                https://download.pytorch.org/libtorch/nightly/cpu/libtorch-cxx11-abi-shared-with-deps-latest.zip`
-                break;
+                https://download.pytorch.org/libtorch/nightly/cpu/libtorch-cxx11-abi-shared-with-deps-latest.zip`;
             default:
                 break;
         }
@@ -95,23 +88,19 @@ const getWinRes=(Os, Lang)=>{
                 return `Download here (Pre-cxx11 ABI):
                     https://download.pytorch.org/libtorch/nightly/cu102/libtorch-shared-with-deps-latest.zip
                     Download here (cxx11 ABI):
-                    https://download.pytorch.org/libtorch/nightly/cu102/libtorch-cxx11-abi-shared-with-deps-latest.zip`
-                break;
+                    https://download.pytorch.org/libtorch/nightly/cu102/libtorch-cxx11-abi-shared-with-deps-latest.zip`;
             case "CUDA 11.3":
                 return `Download here (Pre-cxx11 ABI):
                 https://download.pytorch.org/libtorch/nightly/cu113/libtorch-shared-with-deps-latest.zip
                 Download here (cxx11 ABI):
-                https://download.pytorch.org/libtorch/nightly/cu113/libtorch-cxx11-abi-shared-with-deps-latest.zip`
-                break;
+                https://download.pytorch.org/libtorch/nightly/cu113/libtorch-cxx11-abi-shared-with-deps-latest.zip`;
             case "ROCM 4.5.2 (beta)":
-                return `LibTorch binaries are not available for ROCm, please build it from source`
-                break;
+                return `LibTorch binaries are not available for ROCm, please build it from source`;
             case "CPU":
                 return `Download here (Pre-cxx11 ABI):
                 https://download.pytorch.org/libtorch/nightly/cpu/libtorch-shared-with-deps-latest.zip
                 Download here (cxx11 ABI):
-                https://download.pytorch.org/libtorch/nightly/cpu/libtorch-cxx11-abi-shared-with-deps-latest.zip`
-                break;
+                https://download.pytorch.org/libtorch/nightly/cpu/libtorch-cxx11-abi-shared-with-deps-latest.zip`;
             default:
                 break;
         }
@@ -123,14 +112,11 @@ const getMacRes=(Os, Lang)=>{
     if(Lang === "Python"){
         switch (Os.Packages) {
             case "Conda":
-                return casePlatformPython(Os, 'Conda', 'Mac')
-                break;
+                return casePlatformPython(Os, 'Conda', 'Mac');
             case "Pip":
-                return casePlatformPython(Os, 'Pip', 'Mac')
-                break;
+                return casePlatformPython(Os, 'Pip', 'Mac');
             case "Source":
-                return casePlatformPython(Os, 'Source', 'Mac')
-                break;
+                return casePlatformPython(Os, 'Source', 'Mac');
             default:
                 break;
         }
@@ -138,26 +124,20 @@ const getMacRes=(Os, Lang)=>{
     if(Lang === "C++ / Java"){
         switch (Os.ComputePlatform) {
             case "CUDA 10.2":
-                return `CUDA-10.2 PyTorch builds are no longer available for Windows, please use CUDA-11.3`
-                break;
+                return `CUDA-10.2 PyTorch builds are no longer available for Windows, please use CUDA-11.3`;
             case "CUDA 11.3":
                 return `Download here (Release version):
                 https://download.pytorch.org/libtorch/nightly/cu113/libtorch-win-shared-with-deps-latest.zip
                 Download here (Debug version):
-                https://download.pytorch.org/libtorch/nightly/cu113/libtorch-win-shared-with-deps-debug-latest.zip`
-                break;
+                https://download.pytorch.org/libtorch/nightly/cu113/libtorch-win-shared-with-deps-debug-latest.zip`;
             case "CPU":
                 return `Download here (Release version):
                 https://download.pytorch.org/libtorch/nightly/cpu/libtorch-win-shared-with-deps-latest.zip
                 Download here (Debug version):
-                https://download.pytorch.org/libtorch/nightly/cpu/libtorch-win-shared-with-deps-debug-latest.zip`
-                break;
+                https://download.pytorch.org/libtorch/nightly/cpu/libtorch-win-shared-with-deps-debug-latest.zip`;
             default:
                 break;
         }
-        
-        // return `Download here:
-        // https://download.pytorch.org/libtorch/nightly/cpu/libtorch-macos-latest.zip`
     }
 
 }
