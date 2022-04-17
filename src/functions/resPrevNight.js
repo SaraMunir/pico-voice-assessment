@@ -70,14 +70,11 @@ const getWinRes=(Os, Lang)=>{
     if(Lang === "Python"){
         switch (Os.Packages) {
             case "Conda":
-                return casePlatformPython(Os, Lang, 'Win')
-                break;
+                return casePlatformPython(Os, Lang, 'Win');
             case "Pip":
-                return casePlatformPython(Os, Lang, 'Win')
-                break;
+                return casePlatformPython(Os, Lang, 'Win');
             case "Source":
-                return casePlatformPython(Os, Lang, 'Win')
-                break;
+                return casePlatformPython(Os, Lang, 'Win');
             default:
                 break;
         }
