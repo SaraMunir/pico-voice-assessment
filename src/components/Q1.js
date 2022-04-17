@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 import NavBar from './NavBar'
-import {choicePython, choiceCJava} from '../functions/Linux'
-import {caseForStableMac} from '../functions/caseForStableMac'
-import {caseForStableWin} from '../functions/caseForStableWin'
 import {resPrevNight} from '../functions/resPrevNight'
 import { resStable } from '../functions/resStable'
 function Q1() {
