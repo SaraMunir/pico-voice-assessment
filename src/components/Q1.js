@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import NavBar from './NavBar'
-
 import {choicePython, choiceCJava} from '../functions/Linux'
 import {caseForStableMac} from '../functions/caseForStableMac'
 import {caseForStableWin} from '../functions/caseForStableWin'
@@ -177,37 +176,6 @@ function Q1() {
         }
     } 
 
-    const caseOs=(Os)=>{
-        switch (Os.YourOS) {
-            case "Linux":
-                if(Os.Language==="Python"){
-                    return choicePython(Os)
-                }
-                if(Os.Language==="C++ / Java"){
-                    return choiceCJava(Os)
-                }
-                break;
-            case "Mac":
-                if(Os.Language==="Python"){
-                    return caseForStableMac(Os,"Python")
-                }
-                if(Os.Language==="C++ / Java"){
-                    return caseForStableMac(Os,"C++ / Java")
-                    // return choiceCJava(Os)
-                }
-                break;
-            case "Windows":
-                if(Os.Language==="Python"){
-                    return caseForStableWin(Os,"Python")
-                }
-                if(Os.Language==="C++ / Java"){
-                    return caseForStableWin(Os,"C++ / Java")
-                }
-                break;
-            default:
-                break;
-        }
-    }
     return (
         <>
             <NavBar/>
