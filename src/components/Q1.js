@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import NavBar from './NavBar'
 import {resPrevNight} from '../functions/resPrevNight'
 import { resStable } from '../functions/resStable'
+import { resLTS } from '../functions/resLTS'
 function Q1() {
     const [ques, setQuests]=useState([
         {
@@ -50,6 +51,11 @@ function Q1() {
             show: false
         }
     ])
+    const [resObj, setResObj]=useState({
+        resStabLinConPyCud102 : false,
+        resStabLinConPyCud113 : false,
+        resStabLinConPyRocm452 : false,
+    })
     const [result, setResult]=useState({show: false, message: ''})
 
     const [userChoice, setUserChoice]=useState({
@@ -161,99 +167,123 @@ function Q1() {
         switch (usersCh.PyTorchBuild){
             case 'Stable (1.11.0)': 
                 setResult({show: true, message: resStable(usersCh)})
+
                 break;
             case 'Preview (Nightly)': 
                 setResult({show: true, message: resPrevNight(usersCh)})
                 break;
             case 'LTS (1.8.2)': 
-                setResult({show: true, message: resPrevNight(usersCh)})
+                setResult({show: true, message: resLTS(usersCh)})
                 break;
             default:
                 break;
         }
     } 
-
     return (
         <>
             <NavBar/>
             <section className='Q1'>
-                    <div className='allQues'>
-                        <ul>
-                            <li>
-                                <p>Choose Your Build</p>
-                                <div className="row">
-                                {ques[0].options.map(opt=>
-                                    userChoice.PyTorchBuild=== opt ?
-                                    <button key={opt} className='optionBtn selectedBtn'>{opt}</button> : 
-                                    <button key={opt} className='optionBtn' onClick={()=>selectBuild(opt, ques[0].type)}>{opt}</button>
-                                )}
+                <div className='allQues'>
+                    <ul>
+                        <li>
+                            <p>Choose Your Build</p>
+                            <div className="row">
+                            {ques[0].options.map(opt=>
+                                userChoice.PyTorchBuild=== opt ?
+                                <button key={opt} className='optionBtn selectedBtn'>{opt}</button> : 
+                                <button key={opt} className='optionBtn' onClick={()=>selectBuild(opt, ques[0].type)}>{opt}</button>
+                            )}
+                            </div>
+                        </li>
+                        <li>
+                            {
+                                ques[1].show ?
+                                <div>
+                                    <p>Choose Your OS</p>
+                                    {ques[1].options.map(opt=>
+                                        userChoice.YourOS === opt ?
+                                        <button key={opt} className='optionBtn selectedBtn'>{opt}</button> : 
+                                        <button key={opt} className='optionBtn' onClick={()=>selectBuild(opt, ques[1].type)}>{opt}</button>
+                                    )}
                                 </div>
-                            </li>
-                            <li>
-                                {
-                                    ques[1].show ?
-                                    <div>
-                                        <p>Choose Your OS</p>
-                                        {ques[1].options.map(opt=>
-                                            userChoice.YourOS === opt ?
-                                            <button key={opt} className='optionBtn selectedBtn'>{opt}</button> : 
-                                            <button key={opt} className='optionBtn' onClick={()=>selectBuild(opt, ques[1].type)}>{opt}</button>
-                                        )}
-                                    </div>
-                                    : null
-                                }
-                            </li>
-                            <li>
-                                {
-                                    ques[2].show ?
-                                    <div>
-                                        <p>Choose Your Language</p>
-                                        {ques[2].options.map(opt=>
-                                            userChoice[ques[2].type]=== opt ?
-                                            <button key={opt} className='optionBtn selectedBtn'>{opt}</button> : 
-                                            <button key={opt} className='optionBtn' onClick={()=>selectBuild(opt, ques[2].type)}>{opt}</button>
-                                        )}
-                                    </div>
-                                    : null
-                                }
-                            </li>
-                            <li>
-                                {
-                                    ques[3].show ?
-                                    <div>
-                                        <p>Choose Your Package</p>
-                                        {ques[3].options.map(opt=>
-                                            userChoice[ques[3].type]=== opt ?
-                                            <button key={opt} className='optionBtn selectedBtn'>{opt}</button> : 
-                                            <button key={opt} className='optionBtn' onClick={()=>selectBuild(opt, ques[3].type)}>{opt}</button>
-                                        )}
-                                    </div>
-                                    : null
-                                }
-                            </li>
-                            <li>
-                                {
-                                    ques[4].show ?
-                                    <div>
-                                        <p>Choose Your Compute Platform</p>
-                                        {ques[4].options.map(opt=>
-                                            userChoice[ques[4].type]=== opt ?
-                                            <button key={opt} className='optionBtn selectedBtn'>{opt}</button> : 
-                                            <button key={opt} className='optionBtn' onClick={()=>selectBuild(opt, ques[4].type)}>{opt}</button>
-                                        )}
-                                    </div>
-                                    : null
-                                }
-                            </li>
-                        </ul>
-                    </div>
-                    <div className='resContainer' >
-                        {
-                            result.show ? 
-                            <h3 className='resultDisplay'>{result.message}</h3>
-                            : null
-                        }
-                    </div>
+                                : null
+                            }
+                        </li>
+                        <li>
+                            {
+                                ques[2].show ?
+                                <div>
+                                    <p>Choose Your Language</p>
+                                    {ques[2].options.map(opt=>
+                                        userChoice[ques[2].type]=== opt ?
+                                        <button key={opt} className='optionBtn selectedBtn'>{opt}</button> : 
+                                        <button key={opt} className='optionBtn' onClick={()=>selectBuild(opt, ques[2].type)}>{opt}</button>
+                                    )}
+                                </div>
+                                : null
+                            }
+                        </li>
+                        <li>
+                            {
+                                ques[3].show ?
+                                <div>
+                                    <p>Choose Your Package</p>
+                                    {ques[3].options.map(opt=>
+                                        userChoice[ques[3].type]=== opt ?
+                                        <button key={opt} className='optionBtn selectedBtn'>{opt}</button> : 
+                                        <button key={opt} className='optionBtn' onClick={()=>selectBuild(opt, ques[3].type)}>{opt}</button>
+                                    )}
+                                </div>
+                                : null
+                            }
+                        </li>
+                        <li>
+                            {
+                                ques[4].show ?
+                                <div>
+                                    <p>Choose Your Compute Platform</p>
+                                    {ques[4].options.map(opt=>
+                                        userChoice[ques[4].type]=== opt ?
+                                        <button key={opt} className='optionBtn selectedBtn'>{opt}</button> : 
+                                        <button key={opt} className='optionBtn' onClick={()=>selectBuild(opt, ques[4].type)}>{opt}</button>
+                                    )}
+                                </div>
+                                : null
+                            }
+                        </li>
+                    </ul>
+                </div>
+                <div className='resContainer' >
+                    {
+                        result.show ? 
+                        <h3 className='resultDisplay'>{result.message}</h3>
+                        : null
+                    }
+                    {
+                        resObj.resStabLinConPyCud102 ? 
+                        <p>
+                            conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+                        </p>
+                        : null
+                    }
+                    {
+                        resObj.resStabLinConPyCud113 ? 
+                        <p>
+                            conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+                        </p>
+                        : null
+                    }
+                    {
+                        resObj.resStabLinConPyRocm452 ? 
+                        <p>
+                            <span>NOTE:</span>
+                            Conda packages are not currently available for ROCm, please use pip instead
+
+                        </p>
+                        : null
+                    }
+
+                </div>
             </section>
         </>
     )

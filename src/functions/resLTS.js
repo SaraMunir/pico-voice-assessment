@@ -33,14 +33,11 @@ const getLinuxRes=(Os, Lang)=>{
     if(Lang === "Python"){
         switch (Os.Packages) {
             case "Conda":
-                return casePlatformPython(Os, 'Conda', 'Linux')
-                break;
+                return casePlatformPython(Os, 'Conda', 'Linux');
             case "Pip":
-                return casePlatformPython(Os, 'Pip', 'Linux')
-                break;
+                return casePlatformPython(Os, 'Pip', 'Linux');
             case "Source":
-                return casePlatformPython(Os, 'Source', 'Linux')
-                break;
+                return casePlatformPython(Os, 'Source', 'Linux');
             default:
                 break;
         }
@@ -48,64 +45,39 @@ const getLinuxRes=(Os, Lang)=>{
     if(Lang === "C++ / Java"){
         switch(Os.ComputePlatform) {
             case "CUDA 10.2":
-                const resultObj ={
-                    note: {
-                        message: "Additional support for these binaries may be provided by",
-                        hyperLink: "PyTorch Enterprise Support Program Participants.",
-                        link: "https://pytorch.org/enterprise-support-program", 
-                    },
-                    downloadLink: [
-                        { 
-                            message: "Download here (Pre-cxx11 ABI):", 
-                            link: "https://download.pytorch.org/libtorch/lts/1.8/cu102/libtorch-shared-with-deps-1.8.2%2Bcu102.zip"
-                        },
-                        { 
-                            message: "Download here (cxx11 ABI):", 
-                            link: "https://download.pytorch.org/libtorch/lts/1.8/cu102/libtorch-cxx11-abi-shared-with-deps-1.8.2%2Bcu102.zip"
-                        }
-                    ]
-                }
                 return `Download here (Pre-cxx11 ABI):
                 https://download.pytorch.org/libtorch/lts/1.8/cu102/libtorch-shared-with-deps-1.8.2%2Bcu102.zip
                 Download here (cxx11 ABI):
                 https://download.pytorch.org/libtorch/lts/1.8/cu102/libtorch-cxx11-abi-shared-with-deps-1.8.2%2Bcu102.zip
-                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`
-                break;
+                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`;
             case "CUDA 11.1":
                 return `Download here (Pre-cxx11 ABI):
                 https://download.pytorch.org/libtorch/lts/1.8/cu111/libtorch-shared-with-deps-1.8.2%2Bcu111.zip
                 Download here (cxx11 ABI):
                 https://download.pytorch.org/libtorch/lts/1.8/cu111/libtorch-cxx11-abi-shared-with-deps-1.8.2%2Bcu111.zip
-                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`
-                break;
+                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`;
             case "ROCM 4.5.2 (beta)":
-                return `NOTE: ROCm is not supported in LTS`
-                break;
+                return `NOTE: ROCm is not supported in LTS`;
             case "CPU":
                 return `Download here (Pre-cxx11 ABI):
                 https://download.pytorch.org/libtorch/lts/1.8/cpu/libtorch-shared-with-deps-1.8.2%2Bcpu.zip
                 Download here (cxx11 ABI):
                 https://download.pytorch.org/libtorch/lts/1.8/cpu/libtorch-cxx11-abi-shared-with-deps-1.8.2%2Bcpu.zip
-                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`
-                break;
+                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`;
             default:
                 break;
         }
     }
 }
-// linux java done
 const getWinRes=(Os, Lang)=>{
     if(Lang === "Python"){
         switch (Os.Packages) {
             case "Conda":
-                return casePlatformPython(Os, Lang, 'Win')
-                break;
+                return casePlatformPython(Os, Lang, 'Win');
             case "Pip":
-                return casePlatformPython(Os, Lang, 'Win')
-                break;
+                return casePlatformPython(Os, Lang, 'Win');
             case "Source":
-                return casePlatformPython(Os, Lang, 'Win')
-                break;
+                return casePlatformPython(Os, Lang, 'Win');
             default:
                 break;
         }
@@ -117,41 +89,33 @@ const getWinRes=(Os, Lang)=>{
                 https://download.pytorch.org/libtorch/lts/1.8/cu102/libtorch-win-shared-with-deps-1.8.2%2Bcu102.zip
                 Download here (Debug version):
                 https://download.pytorch.org/libtorch/lts/1.8/cu102/libtorch-win-shared-with-deps-debug-1.8.2%2Bcu102.zip
-                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`
-                break;
+                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`;
             case "CUDA 11.1":
                 return `Download here (Release version):
                 https://download.pytorch.org/libtorch/lts/1.8/cu111/libtorch-win-shared-with-deps-1.8.2%2Bcu111.zip
                 Download here (Debug version):
                 https://download.pytorch.org/libtorch/lts/1.8/cu111/libtorch-win-shared-with-deps-debug-1.8.2%2Bcu111.zip
-                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`
-                break;
+                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`;
             case "CPU":
                 return `Download here (Release version):
                 https://download.pytorch.org/libtorch/lts/1.8/cpu/libtorch-win-shared-with-deps-1.8.2%2Bcpu.zip
                 Download here (Debug version):
                 https://download.pytorch.org/libtorch/lts/1.8/cpu/libtorch-win-shared-with-deps-debug-1.8.2%2Bcpu.zip
-                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`
-                break;
+                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`;
             default:
                 break;
         }
     }
 }
-// Win java done
-
 const getMacRes=(Os, Lang)=>{
     if(Lang === "Python"){
         switch (Os.Packages) {
             case "Conda":
                 return casePlatformPython(Os, 'Conda', 'Mac')
-                break;
             case "Pip":
-                return casePlatformPython(Os, 'Pip', 'Mac')
-                break;
+                return casePlatformPython(Os, 'Pip', 'Mac');
             case "Source":
-                return casePlatformPython(Os, 'Source', 'Mac')
-                break;
+                return casePlatformPython(Os, 'Source', 'Mac');
             default:
                 break;
         }
@@ -160,18 +124,16 @@ const getMacRes=(Os, Lang)=>{
         switch (Os.ComputePlatform) {
             case "CPU":
                 return `# macOS is not currently supported for lts
-                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`
-                break;
+                Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program Participants.`;
             default:
                 break;
         }
     }
 }
-// Win java done
-
 const casePlatformPython = (Os, package1, system)=>{
     if(system === 'Linux'){
         switch (Os.ComputePlatform) {
+            
             case "CUDA 10.2":
                 if(package1 ==="Conda"){
                     return `conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch-lts
@@ -227,7 +189,6 @@ const casePlatformPython = (Os, package1, system)=>{
                 break;
         }
     }
-    // linux done only python
     if(system === 'Win'){
         switch (Os.ComputePlatform) {
             case "CUDA 10.2":
@@ -274,8 +235,6 @@ const casePlatformPython = (Os, package1, system)=>{
                 break;
         }
     }
-    // Win done only python
-
     if(system === 'Mac'){
         switch (Os.ComputePlatform) {
             case "CPU":
@@ -296,7 +255,4 @@ const casePlatformPython = (Os, package1, system)=>{
                 break;
         }
     }
-    // Mac done only python
-
-
 }

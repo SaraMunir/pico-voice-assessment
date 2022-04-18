@@ -1,7 +1,6 @@
 .Q1{
-    border: 1px solid purple;
     min-height: 70vh;
-   width: 70%;
+    width: 70%;
     ul {
         li {
             margin: 10px auto;
@@ -16,20 +15,18 @@
         border: none;
         padding: 8px 16px;
         margin: 5px;
-        background-image: linear-gradient(20deg, #846b6b99,#796f60ae);
+        background-image: linear-gradient(20deg, #88888899, #6a6a6aad);
         font-weight: 500;
-        color: rgb(212, 212, 212);
+        color: #d4d4d4;
         cursor: pointer;
-        border-radius: 50px;
+        border-radius: 5px;
         font-size: .9rem;
         transition: .5s;
         box-shadow: 0 0 4px #414141bd;
         text-shadow: #000000;
     }
     .selectedBtn{
-    background-image: linear-gradient(20deg, #fe5858,#f8b250);
-    color: white;
-    }
+background-image: linear-gradient(20deg, #fe5858, #d96f57);}
     .disabled {
     background-image: linear-gradient(20deg, #6e6e6e,#4d4d4d);
     }
@@ -43,13 +40,12 @@
     }
     .allQues{
         min-height: 45vh;
-        border: 1px solid red;
     }
     .resContainer{
         margin: 0 auto;
         .resultDisplay{
             // width: 80%;
-            background-color: #545454;
+            background-color: #3a3636;
             color: white;
             padding: 30px;
             margin: 20px auto;

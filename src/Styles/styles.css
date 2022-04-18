@@ -1,5 +1,4 @@
 .Q1 {
-  border: 1px solid purple;
   min-height: 70vh;
   width: 70%;
 }
@@ -15,19 +14,18 @@
   border: none;
   padding: 8px 16px;
   margin: 5px;
-  background-image: linear-gradient(20deg, rgba(132, 107, 107, 0.6), rgba(121, 111, 96, 0.6823529412));
+  background-image: linear-gradient(20deg, rgba(136, 136, 136, 0.6), rgba(106, 106, 106, 0.6784313725));
   font-weight: 500;
-  color: rgb(212, 212, 212);
+  color: #d4d4d4;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 5px;
   font-size: 0.9rem;
   transition: 0.5s;
   box-shadow: 0 0 4px rgba(65, 65, 65, 0.7411764706);
   text-shadow: #000000;
 }
 .Q1 .selectedBtn {
-  background-image: linear-gradient(20deg, #fe5858, #f8b250);
-  color: white;
+  background-image: linear-gradient(20deg, #fe5858, #d96f57);
 }
 .Q1 .disabled {
   background-image: linear-gradient(20deg, #6e6e6e, #4d4d4d);
@@ -42,13 +40,12 @@
 }
 .Q1 .allQues {
   min-height: 45vh;
-  border: 1px solid red;
 }
 .Q1 .resContainer {
   margin: 0 auto;
 }
 .Q1 .resContainer .resultDisplay {
-  background-color: #545454;
+  background-color: #3a3636;
   color: white;
   padding: 30px;
   margin: 20px auto;
@@ -110,6 +107,9 @@
   background: #e8ecf2;
   padding: 20px;
 }
+.installCntr .dayMode .preWrap button {
+  color: black;
+}
 .installCntr .dayMode pre {
   background: #e8ecf2;
 }
@@ -136,6 +136,9 @@
 .installCntr .nightMode .preWrap {
   background: #383641;
   padding: 20px;
+}
+.installCntr .nightMode .preWrap button {
+  color: white;
 }
 .installCntr .nightMode pre {
   background: #383641;

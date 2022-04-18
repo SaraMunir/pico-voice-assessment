@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 
 
 function Langueages() {
-  return (
+    return (
     <div>Langueages</div>
-  )
+    )
 }
 
 export default Langueages

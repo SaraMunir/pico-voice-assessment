@@ -65,8 +65,10 @@ $purpleNigh: #9487dc;
         .preWrap{
             background: #e8ecf2;
             padding: 20px;
-
-
+            // color: ;
+            button{
+                color: black;
+            }
         }
         pre {
             background: #e8ecf2;
@@ -97,6 +99,9 @@ $purpleNigh: #9487dc;
         .preWrap{
             background: #383641;
             padding: 20px;
+            button{
+                color: white;
+            }
         }
         pre {
             background: #383641;

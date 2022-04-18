@@ -122,9 +122,7 @@ const getMacRes=(Os, Lang)=>{
                 break;
         }
     }
-
 }
-
 const casePlatformPython = (Os, package1, system)=>{
     if(system === 'Linux'){
         switch (Os.ComputePlatform) {
@@ -176,7 +174,7 @@ const casePlatformPython = (Os, package1, system)=>{
                 break;
         }
     }
-    // Linux python ✅
+    // Linux python ✅ ✅ ✅
     if(system === 'Win'){
         switch (Os.ComputePlatform) {
             case "CUDA 10.2":

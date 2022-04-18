@@ -104,7 +104,6 @@ const getWinRes=(Os, Lang)=>{
     }
 }
 
-
 const getMacRes=(Os, Lang)=>{
     if(Lang === "Python"){
         switch (Os.Packages) {
