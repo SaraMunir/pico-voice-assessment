@@ -13,7 +13,7 @@ function Home() {
             </Link>
           </li>
           <li>
-            <Link to="/Q2">
+            <Link to="/Q2/cSharp">
               <button className='spBtn'>[ Q2 ]
               </button>
             </Link>
