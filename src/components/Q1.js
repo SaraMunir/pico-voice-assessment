@@ -51,11 +51,7 @@ function Q1() {
             show: false
         }
     ])
-    const [resObj, setResObj]=useState({
-        resStabLinConPyCud102 : false,
-        resStabLinConPyCud113 : false,
-        resStabLinConPyRocm452 : false,
-    })
+
     const [result, setResult]=useState({show: false, message: ''})
 
     const [userChoice, setUserChoice]=useState({
@@ -259,30 +255,6 @@ function Q1() {
                         <h3 className='resultDisplay'>{result.message}</h3>
                         : null
                     }
-                    {
-                        resObj.resStabLinConPyCud102 ? 
-                        <p>
-                            conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
-                        </p>
-                        : null
-                    }
-                    {
-                        resObj.resStabLinConPyCud113 ? 
-                        <p>
-                            conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
-                        </p>
-                        : null
-                    }
-                    {
-                        resObj.resStabLinConPyRocm452 ? 
-                        <p>
-                            <span>NOTE:</span>
-                            Conda packages are not currently available for ROCm, please use pip instead
-
-                        </p>
-                        : null
-                    }
-
                 </div>
             </section>
         </>
